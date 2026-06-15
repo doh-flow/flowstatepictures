@@ -1,0 +1,31 @@
+.nav{
+    /* display: flex;
+    flex-direction: column; */
+    position: static; 
+    color: #001100;
+    background-color: beige;
+    height: 300px;
+}
+#head {
+    /* color: #ffff00; */
+    /* position: absolute; */
+    font-size: 30;
+    transition: font-size 0.1s ease-out;
+    background-color: aquamarine;
+    width: 300px;
+    text-align: left;
+}
+
+#head:hover {
+    font-size: 40;
+}
+
+.headlist{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    /* background-color: aliceblue; */
+    gap: 40px;
+    margin: 10px 15px;
+}
+
