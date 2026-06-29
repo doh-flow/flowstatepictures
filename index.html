@@ -1,62 +1,92 @@
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FlowState</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <nav class='nav'>
-        <a href="index.html">
-            <div id="head">
-               <img id="logo" src="pic.png" alt="logo">
+
+    <nav class="nav">
+        <a href="" class="nav-logo-link">
+            <div id="logo-wrap">
+                <img id="logo" src="pic.png" alt="FlowState logo">
             </div>
         </a>
 
-        <ul class="headlist">
+        <ul class="nav-list">
             <li><a href="#about">About</a></li>
-            <li><a href="Reel/index.html">Reel</a></li>
-            <li><a href="DoubleExposure/index.html">Double Exposure</a></li>
-            <li><a href="Contact/index.html">Contact</a></li>
+            <li><a href="Reel/">Reel</a></li>
+            <li><a href="DoubleExposure/">Double Exposure</a></li>
+            <li><a href="Contact/">Contact</a></li>
         </ul>
     </nav>
 
 
-    <section>
-        <div>
-            <video id="playing video" width="400" autoplay loop muted>
-                <source src="ComfyUI_00015_.mp4" type="video/mp4">
-            </video>
+    <section id="hero">
+        <div class="hero-inner">
+            <div class="videobox">
+                <video id="hero-video" autoplay loop muted playsinline>
+                    <source src="media/moonlight.mov" type="video/mp4">
+                </video>
+            </div>
             <h1 id="slogan">Within the Blurriness, the Exposure Holds Focus</h1>
-            <a href="Reel/index.html">Explore Reels</a>
-            <a href="Contact/index.html">Contact Us</a>
+            <div class="hero-cta">
+                <a href="Reel/" class="cta-primary">Explore Reels</a>
+                <a href="Contact/" class="cta-secondary">Contact Us</a>
+            </div>
         </div>
     </section>
-    
-    <section>
-        <h1 id="about">ABOUT</h1>
-        <p>Toronto-based marketing filmmakers</p>
-        <div class="name1">
-            <img id="image1" src="pic.png" alt="dough">
-            <h2 id="name1">Name1Here</h2>
-            <p id="desc1">description here</p>
-        </div>
-        
-        <div class="name2">
-            <img id="image3" src="pic.png" alt="dough">
-            <h2 id="name2">Name2Here</h2>
-            <p id="desc2">description here</p>
+
+
+    <section id="about">
+        <h2 class="section-label">ABOUT</h2>
+        <p1 class="about-tagline">A Toronto-based studio creating marketing films</p1>
+
+        <div class="team-grid">
+
+            <div class="team-member" id="member-1">
+                <img class="member-photo" src="pic.png" alt="dough">
+                <h3 class="member-name">Name1Here</h3>
+                <p class="member-desc">description here</p>
+            </div>
+
+            <div class="team-member" id="member-2">
+                <img class="member-photo" src="pic.png" alt="dough">
+                <h3 class="member-name">Name2Here</h3>
+                <p class="member-desc">description here</p>
+            </div>
+
+            <div class="team-member" id="member-3">
+                <img class="member-photo" src="pic.png" alt="dough">
+                <h3 class="member-name">Name3Here</h3>
+                <p class="member-desc">description here</p>
+            </div>
+
         </div>
 
-        <div class="name3">
-            <img id="image3" src="pic.png" alt="dough">
-            <h2 id="name3">Name3Here</h2>
-            <p id="desc3">description here</p>
+        <div class="about-cta">
+            <a href="Reel/"><p2>We create moments that turn into Cinema</p2></a>
         </div>
-
-        <a href="Reel/index.html">We found moments that turned into Cinema</a>
     </section>
+
     
-    <footer>Footer....eh?</footer>
+
+    <footer id="footer">
+        <p class="footer-copy">© 2026 Flow State Pictures</p>
+        <p class="footer-email">film@flowstatepic.ca</p>
+        <div class="footer-social">
+            <a href="" class="social-link">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="" class="social-link">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
+
 </body>
+</html>
