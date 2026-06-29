@@ -1,26 +1,61 @@
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Reel</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <nav class='nav'>
-        <a href="../index.html">
-            <div id="head">
-               <img id="logo" src="pic.png" alt="logo">
+
+    <nav class="nav">
+        <a href="../" class="nav-logo-link">
+            <div id="logo-wrap">
+                <img id="logo" src="pic.png" alt="FlowState logo">
             </div>
         </a>
 
-        <ul class="headlist">
+        <ul class="nav-list">
             <li><a href="../#about">About</a></li>
-            <li><a href="index.html">Reel</a></li>
-            <li><a href="../DoubleExposure/index.html">Double Exposure</a></li>
-            <li><a href="../Contact/index.html">Contact</a></li>
+            <li><a href="">Reel</a></li>
+            <li><a href="../DoubleExposure/">Double Exposure</a></li>
+            <li><a href="../Contact/">Contact</a></li>
         </ul>
     </nav>
 
-    <h1>yo</h1>
+    <h1 id="reel-title">Reel</h1>
+
+    <section class="gallery" id="gallery">
+        <h2 class="section-label">Gallery - Pre-screening</h2>
+        <p2 class="section-desc">Press pause</p2>
+
+        <div id="stills"></div>
+    </section>
+
+    <section class="screening" id="screening">
+        <h2 class="section-label">Screening</h2>
+        <div id="videos"></div>
+    </section>
+
+    <section>
+        <div class="reel-cta">
+            <a href="../Contact/" class="cta-talk"><p2 class="anchor">Working on something? Let's talk</p2></a>
+            <a href="../DoubleExposure/" class="cta-double"><p1 class="anchor">Not everything we create is made for brief...</p1></a>
+        </div>
+    </section>
     
+    <footer id="footer">
+        <p class="footer-copy">© 2026 Flow State Pictures</p>
+        <p class="footer-email">film@flowstatepic.ca</p>
+        <div class="footer-social">
+            <a href="" class="social-link">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="" class="social-link">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
+</html>
