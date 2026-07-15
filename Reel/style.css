@@ -502,20 +502,6 @@ p2 {
   position: relative;
 }
 
-.footer-email::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: var(--accent);
-  transition: width 0.25s ease;
-}
-
-.footer-email:hover { color: var(--accent-warm); }
-.footer-email:hover::after { width: 100%; }
-
 /* Social icons */
 .footer-social {
   display: flex;
