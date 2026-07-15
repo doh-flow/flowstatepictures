@@ -36,7 +36,7 @@ for (let i = 1; i <= 12; i++) {
     stillBox.classList.add("still-item");
 
     stillBox.innerHTML = `
-        <img id="still${i}" class="still-img" src="../media/gallery/${i}.png" alt="still${i}">
+        <img id="still${i}" class="still-img" src="https://pub-afc509d8cc7d4e5f870756f5f37512c1.r2.dev/reel/${i}.jpg" alt="still${i}">
         <p id="stilldesc${i}" class="still-desc">${StillDesc[i-1]}</p>
     `;
 
