@@ -1,23 +1,23 @@
 const StillDesc = [
-    "Description1",
-    "Description2",
-    "Description3",
-    "Description4",
-    "Description5",
-    "Description6",
-    "Description7",
-    "Description8",
-    "Description9",
-    "Description10",
-    "Description11",
-    "Description12",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
 ]
 
 const VidDesc = [
-    "Description1",
-    "Description2",
-    "Description3",
-    "Description4",
+    "",
+    "",
+    "",
+    "",
 ]
 
 const videoid = [
