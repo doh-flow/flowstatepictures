@@ -10,14 +10,15 @@
   --ink-bright:  #6b6966;
   --accent:      #b85c38;
   --accent-warm: #c97a52;
-  --ref1:        #2e581d;
-  --ref2:        #1885b8;
+  /*--ref1:        #2e581d;
+  --ref2:        #1885b8;*/
   --type-display: 'Bebas Neue', sans-serif;
   --type-sub:     'Zalando Sans Expanded', sans-serif;
   --type-body:    'Roboto Mono', monospace;
   --type-mono:    'DM Mono', monospace;
   --grain-opacity: 0.55;
-  --pad: 4rem;
+  --pad: 60px;
+  --side: clamp(1rem,9vw,4rem);
 }
 
 /* ── RESET & BASE ────────────────────────────────────────── */
@@ -67,14 +68,13 @@ a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 
 section {
-    margin: 0rem 4rem;
-    /* background: var(--ref1); */
+    margin: 0rem var(--side);
 }
 
 /* Largest Header */
 h1 {
     font-family: var(--type-display);
-    font-size: clamp(63px, 7vw, 132px);
+    font-size: clamp(30px, 9vw, 132px);
     font-weight: 900;
     letter-spacing: 0.04em;
     line-height: 1;
@@ -88,13 +88,13 @@ h2 {
   letter-spacing: 0.25em;
   color: var(--accent);
   text-transform: uppercase;
-  padding: 1rem 0rem;
+  margin-top: 1rem;
 }
 
 /* Subheading */
 h3 {
     font-family: var(--type-display);
-    font-size: 28px;
+    font-size: clamp(10px,3vw,28px);
     font-weight: 100;
     letter-spacing: 0.06em;
     line-height: 1.05;
@@ -107,7 +107,7 @@ h3 {
 p {
   color: var(--ink-soft);
   font-family: var(--type-body);
-  font-size: 15px;
+  font-size: clamp(2px,2vw,15px);
   line-height: 1.6;
   font-weight: 300;
 }
@@ -127,7 +127,7 @@ p1 {
 /* Paragraph Emphasis 2 */
 p2 {
   font-family: var(--type-display);
-  font-size: clamp(32px, 3.5vw, 38px);
+  font-size: clamp(12px, 4vw, 38px);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--ink);
@@ -137,7 +137,7 @@ p2 {
 /* ── NAVIGATION ──────────────────────────────────────────── */
 
 .nav {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -145,8 +145,9 @@ p2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0rem 4rem;
+  margin: 0rem var(--side);
   height: 72px;
+  /* background: linear-gradient(var(--ink),#00000000); */
   background-color: var(--paper);
 }
 .nav::after {
@@ -300,14 +301,14 @@ p2 {
 #footer {
   background-color: var(--ink);
   color: var(--paper);
-  padding: 48px;
+  padding: clamp(0.5rem,6vw,3rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: fixed;
   bottom: 0;
-  left: 0;
   width: 100%;
+  left: 0;
   overflow: hidden;
 }
 
@@ -326,7 +327,7 @@ p2 {
 /* Copyright */
 .footer-copy {
   font-family: var(--type-mono);
-  font-size: 10px;
+  font-size: clamp(3px,1.6vw,10px);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: rgba(230,223,212,0.5);
@@ -335,7 +336,7 @@ p2 {
 /* Email */
 .footer-email {
   font-family: var(--type-body);
-  font-size: 14px;
+  font-size: clamp(5px,2vw,14px);
   font-style: italic;
   color: var(--paper);
   letter-spacing: 0.05em;
@@ -343,10 +344,11 @@ p2 {
   position: relative;
 }
 
+
 /* Social icons */
 .footer-social {
   display: flex;
-  gap: 24px;
+  gap: clamp(10px,3vw,24px);
   align-items: center;
 }
 
