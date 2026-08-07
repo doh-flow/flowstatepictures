@@ -1,7 +1,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowState</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -10,42 +11,40 @@
     <nav class="nav">
         <a href="../" class="nav-logo-link">
             <div id="logo-wrap">
-                <img id="logo" src="https://pub-afc509d8cc7d4e5f870756f5f37512c1.r2.dev/main/FlowstateLogo.png" alt="FlowState logo">
+                <img id="logo" alt="FlowState logo">
             </div>
         </a>
+
         <ul class="nav-list">
             <li><a href="../#about">About</a></li>
             <li><a href="../Reel/">Reel</a></li>
-            <!-- <li><a href="../DoubleExposure/">Double Exposure</a></li> -->
-            <li><a href="">Contact</a></li>
+            <!-- <li><a href="DoubleExposure/">Double Exposure</a></li> -->
+            <li><a href="../Contact/">Contact</a></li>
         </ul>
     </nav>
 
-    <section class="contact-main">
 
-        <h1 class="contact-title">Contact</h1>
+    <h1 id="reel-title">Reel</h1>
 
-        <div class="contact-links">
-            <div class="email">
-                <a href="mailto:film@flowstatepic.ca" class="contact-social-link">
-                    <i class="fa-solid fa-envelope"></i>
-                    <p>film@flowstatepic.ca</p>
-                </a>
-            </div>
-            <div class="insta">
-                <a href="https://www.instagram.com/flowstatepic/" target="_blank" rel="noopener noreferrer" class="contact-social-link">
-                    <i class="fa-brands fa-instagram"></i>
-                    <p>@flowstatepic</p>
-                </a>
-            </div>
-            <!-- <div class="contact-item">
-                <a href="" class="contact-social-link">
-                    <i class="fa-brands fa-youtube"></i>
-                </a>
-            </div> -->
-        </div>
+    <section class="gallery" id="gallery">
+        <h2 class="section-label">Gallery - Pre-screening</h2>
+        <p2 class="section-desc">Press pause</p2>
 
+        <div id="stills"></div>
     </section>
+
+    <section class="screening" id="screening">
+        <h2 class="section-label">Screening</h2>
+        <div id="videos"></div>
+    </section>
+
+    <section>
+        <div class="reel-cta">
+            <a href="../Contact/" class="cta-talk"><p2 class="anchor">Working on something? Let's talk</p2></a>
+            <!-- <a href="../DoubleExposure/" class="cta-double"><p1 class="anchor">Not everything we create is made for brief...</p1></a> -->
+        </div>
+    </section>
+    
 
     <footer id="footer">
         <p class="footer-copy">© 2026 Flow State Pictures</p>
