@@ -276,18 +276,19 @@ p2 {
 .still-item {
   position: relative;
   display: flex;
-  align-items: flex-end;
-  height: clamp(100px,35vw,260px);          /* all rows share this height */
-  cursor: crosshair;
-  /* width is driven by the image's natural aspect ratio */
+  align-items: flex-end;        /* all rows share this height */
+  flex: none;
+  overflow: hidden;
+  flex: var(--ar, 1.5) 1 0%;
+  cursor: crosshair;        /* width is driven by the image's natural aspect ratio */
 }
 
 .still-img {
   z-index: 1;
   position: relative;
   display: block;
-  height: 100%;
-  width: auto;            /* preserves aspect ratio */
+  width: 100%;            /* preserves aspect ratio */
+  height: auto;
   /* object-fit: cover; */
   transition: filter 0.35s ease;
 }
