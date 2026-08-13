@@ -34,17 +34,42 @@ const videoid = [
 // --- Stills Gallery ---
 const stills = document.getElementById("stills");
 
-for (let i = 1; i <= 12; i++) {
+const StillTotal = 12;
+
+for (let i = 1; i <= StillTotal; i++) {
     const stillBox = document.createElement("div");
     stillBox.id = `stillbox${i}`;
     stillBox.classList.add("still-item");
 
-    stillBox.innerHTML = `
-        <img id="still${i}" class="still-img" src="https://pub-afc509d8cc7d4e5f870756f5f37512c1.r2.dev/reel/${i}.jpg" alt="still${i}">
-        <p id="stilldesc${i}" class="still-desc">${StillDesc[i-1]}</p>
-    `;
+    const img = document.createElement("img");
+    img.id = `still${i}`;
+    img.className = "still-img";
+    img.src = `https://pub-afc509d8cc7d4e5f870756f5f37512c1.r2.dev/reel/${i}.jpg`;
+    img.alt = `still${i}`;
 
+    const desc = document.createElement("p");
+    desc.id = `stilldesc${i}`;
+    desc.className = "still-desc";
+    desc.textContent = StillDesc[i - 1];
+
+    stillBox.appendChild(img);
+    stillBox.appendChild(desc);
     stills.appendChild(stillBox);
+
+    function applyAR(box, image) {
+        const ar = image.naturalWidth / image.naturalHeight;
+        const targetHeight = 230; // match the max of your clamp
+        box.style.flexBasis = `clamp(10px,calc(${ar} * 18vw),${ar * targetHeight}px)`;
+        // Drive the flex-grow of this item by its true aspect ratio
+        box.style.setProperty("--ar", ar);
+    }
+
+    if (img.complete && img.naturalWidth > 0) {
+        applyAR(stillBox, img);
+    } else {
+        img.addEventListener("load", () => applyAR(stillBox, img));
+        img.addEventListener("error", () => stillBox.style.setProperty("--ar", 1.5)); // fallback ratio
+    }
 }
 
 
