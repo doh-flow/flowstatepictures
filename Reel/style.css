@@ -346,15 +346,27 @@ p2 {
 
 
 /* ─── SCREENING SECTION ───────────────────────────────────────────── */
-.screening
+.screening {
+  border: 0rem;
+}
 
 /* 2x2 grid */
 #videos {
   position: relative;
-  padding: 1rem 0rem;
+  padding-top: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 6px;
+}
+@media (max-width: 500px) {
+  #videos {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 700px) {
+  #videos {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .video-item {
@@ -368,7 +380,7 @@ p2 {
 
 .video-item iframe {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 9 / 16;
   border: none;
   display: block;
 }
@@ -393,13 +405,15 @@ p2 {
   flex-direction: column;
   position: relative;
   margin-top: 0;
-  padding: 1rem 0rem 2rem;
+  padding-bottom: 2rem;
   /* padding added from the anchor box itself */
 }
 
 .reel-cta a {
     position: relative;
     display: flex;
+    width: fit-content;
+    margin-top: 2rem;
     background: var(--ref1);
 }
 
@@ -408,7 +422,7 @@ p2 {
   z-index: 2;
   content: '';
   position: absolute;
-  bottom: clamp(0px,1vw,6px);
+  bottom: calc(clamp(0px,1vw,9px) - 3px);
   left: 0;
   width: 100%;
   height: 2px;
@@ -422,7 +436,6 @@ p2 {
     position: relative;
     transition: color 0.25s ease;
     z-index: 1;
-    margin-bottom: 2rem;
     background: var(--ref2);
 }
 .cta-talk p2:hover {color: var(--accent);}
